@@ -1,0 +1,10 @@
+# snapshots:
+#   - name: address_snapshot
+#     relation: ref('in_address_model')
+#     config:
+#       strategy: timestamp
+#       unique_key: "concat(source_system, '|', address_id)"
+#       updated_at: updated_at
+#       hard_deletes: new_record
+#       dbt_valid_to_current: "to_timestamp('9999-12-31 00:00:00', 'YYYY-MM-DD HH24:MI:SS')"
+#       dbt_is_deleted: is_deleted

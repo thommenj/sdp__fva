@@ -1,0 +1,20 @@
+ groups:
+  - name: kd_stamm
+    description: "Domänenteam Kunde"
+    owner:
+      email: dataowner@valiant.ch
+    config:
+      meta:
+        data_owner: Philipp Binggeli
+        cost_center: IT
+        data_classification: sensitive
+
+  - name: kd_adr
+    description: "Domänenteam Kunde"
+    owner:
+      email: dataowner@valiant.ch
+    config:
+      meta:
+        data_owner: Philipp Binggeli
+        cost_center: IT
+        data_classification: sensitive

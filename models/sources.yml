@@ -1,0 +1,9 @@
+version: 1
+
+sources:
+  - name: fva  # Source system name
+    database: sdp__fva      # Optional: database where source is stored
+    schema: f2ldatp0  # Schema containing the source tables
+    tables:
+      - name: kd_stamm   # Table name as it exists in the database
+      # - name: kd_adr

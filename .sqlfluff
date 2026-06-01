@@ -1,0 +1,33 @@
+[sqlfluff]
+templater = dbt
+dialect = postgres
+runaway_limit = 10
+max_line_length = 120
+indent_unit = space
+tab_space_size = 4
+
+[sqlfluff:indentation]
+indented_joins = false
+indented_using_on = true
+implicit_indents = allow
+template_blocks_indent = true
+
+[sqlfluff:templater:dbt]
+# Wird pro Projekt überschrieben (siehe unten)
+project_dir = .
+profiles_dir = ~/.dbt
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = lower
+
+[sqlfluff:rules:references.quoting]
+prefer_quoted_identifiers = false

@@ -1,0 +1,643 @@
+version: 2
+
+models:
+  - name: kd_stamm__acc
+    description: >
+      Access model for kd_stamm, providing a curated and optimized view of the core customer data for downstream consumption. This model is designed to support reporting and analytics use cases by aggregating and transforming the core data into a more user-friendly format.
+    versions:
+      - v: 1 # required
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments: # available in v1.10.5 and higher. Older versions can set the <argument_name> as the top-level property.
+            combination_of_columns:
+              - userbk_nr
+              - kd_lnr
+    config:
+      group: kd_stamm
+      access: public
+      contract:
+        enforced: true
+
+      meta:
+        owner: "scs__sdp__fva__team"
+        domain: "kunde"
+        data_product: "sdp__fva__kd_stamm"
+        status: "aktiv" # aktiv, veraltet, entwicklung
+        classification: "C4"
+        contains_pii: true
+        atlan:
+          attributes:
+            certificateStatus: "VERIFIED"
+            certificateStatusMessage: "Published and validated customer model."
+
+    columns:
+      - name: create_dt
+        description: ""
+        data_type: timestamp without time zone
+      - name: create_id
+        description: ""
+        data_type: numeric(9, 0)
+      - name: mut_von
+        description: ""
+        data_type: timestamp without time zone
+      - name: mut_bis
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_lnr_vis
+        description: ""
+        data_type: numeric(22, 0)
+      - name: log_lnr_mut
+        description: ""
+        data_type: numeric(22, 0)
+      - name: vers_vor
+        description: ""
+        data_type: numeric(5, 0)
+      - name: stat_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: userbk_nr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: vers
+        description: ""
+        data_type: numeric(5, 0)
+      - name: kd_lnr
+        description: ""
+        data_type: numeric(22, 0)
+      - name: kd_appl_cd
+        description: ""
+        data_type: character varying
+      - name: chkl_ber_id
+        description: ""
+        data_type: character varying
+      - name: kd_nr
+        description: ""
+        data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
+      - name: edit_kd_nr
+        description: ""
+        data_type: character varying
+      - name: kd_sort_nr
+        description: ""
+        data_type: numeric(16, 0)
+      - name: ds_cd
+        description: ""
+        data_type: character varying
+      - name: berfirma_nr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kdkat_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_stat_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_segm_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_form_cd
+        description: ""
+        data_type: character varying
+      - name: land_lnr_nat
+        description: ""
+        data_type: numeric(4, 0)
+      - name: land_lnr_ausl
+        description: ""
+        data_type: numeric(4, 0)
+      - name: wzweig_lnr
+        description: ""
+        data_type: numeric(6, 0)
+      - name: geburt_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: geburt_jahr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: ahv_nr
+        description: ""
+        data_type: character varying
+      - name: eroeff_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: aufheb_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: tod_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: tod_jahr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: sitz_nr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kost_stl_lnr_pfct
+        description: ""
+        data_type: numeric(22, 0)
+      - name: name_1
+        description: ""
+        data_type: character varying
+      - name: name_1_p
+        description: ""
+        data_type: character varying
+      - name: vorname
+        description: ""
+        data_type: character varying
+      - name: vorname_p
+        description: ""
+        data_type: character varying
+      - name: kd_bez
+        description: ""
+        data_type: character varying
+      - name: titel_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: titel_cd_p
+        description: ""
+        data_type: numeric(4, 0)
+      - name: anrede_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: anrede_cd_p
+        description: ""
+        data_type: numeric(4, 0)
+      - name: briefanr_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: briefanr
+        description: ""
+        data_type: character varying
+      - name: name_zus
+        description: ""
+        data_type: character varying
+      - name: beruf_cd
+        description: ""
+        data_type: character varying
+      - name: sprache_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: geschlecht_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: zivilstand_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: rform_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: rform_det_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: plz_heimatort
+        description: ""
+        data_type: character varying
+      - name: heimatort_1
+        description: ""
+        data_type: character varying
+      - name: ort_lnr_heimat
+        description: ""
+        data_type: numeric(22, 0)
+      - name: heimatort_2
+        description: ""
+        data_type: character varying
+      - name: ort_lnr_heimat_2
+        description: ""
+        data_type: numeric(22, 0)
+      - name: steuer_peri
+        description: ""
+        data_type: numeric(2, 0)
+      - name: vv_geb_kat
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_vw_cd
+        description: ""
+        data_type: numeric(3, 0)
+      - name: erst_hist_jahr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: bem_int
+        description: ""
+        data_type: character varying
+      - name: wrg_lnr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: guetstand_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: konfes_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: noga_cd
+        description: ""
+        data_type: character varying
+      - name: snb_geldstrom_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: anz_mitarb
+        description: ""
+        data_type: numeric(6, 0)
+      - name: anz_mitarb_per_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: aufent_bewi_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: aufent_bewi_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_lnr_priv
+        description: ""
+        data_type: numeric(22, 0)
+      - name: mitarb_sperr_cd
+        description: ""
+        data_type: character varying
+      - name: sperr_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: vv_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: anl_disp_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: anl_strat_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: mwst_nr
+        description: ""
+        data_type: numeric(6, 0)
+      - name: mwst_behdl_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: effekte_hdl_nr
+        description: ""
+        data_type: numeric(9, 0)
+      - name: bc_lnr_sic
+        description: ""
+        data_type: numeric(22, 0)
+      - name: bil_pfl_cd
+        description: ""
+        data_type: character varying
+      - name: bil_stichtag
+        description: ""
+        data_type: numeric(4, 0)
+      - name: bil_verftag
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kap
+        description: ""
+        data_type: numeric(20, 6)
+      - name: wrg_lnr_kap
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kap_aend_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: hr_eintr_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: hr_eintr_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: hr_eintr_dat_last
+        description: ""
+        data_type: timestamp without time zone
+      - name: hr_loesch_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: log_det_cd_ums
+        description: ""
+        data_type: character varying
+      - name: log_det_cd_erfo
+        description: ""
+        data_type: character varying
+      - name: inter_cmpy_cd
+        description: ""
+        data_type: character varying
+      - name: kd_htyp_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_menge_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_art_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_grp_art_cd
+        description: ""
+        data_type: numeric(3, 0)
+      - name: kd_bez_lang
+        description: ""
+        data_type: character varying
+      - name: kd_bez_lang_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kreditreform_id
+        description: ""
+        data_type: character varying
+      - name: teledata_id
+        description: ""
+        data_type: character varying
+      - name: mig_ref_zeichen
+        description: ""
+        data_type: character varying
+      - name: fis_region
+        description: ""
+        data_type: numeric(2, 0)
+      - name: fis_dom
+        description: ""
+        data_type: numeric(4, 0)
+      - name: fis_mutdat
+        description: ""
+        data_type: timestamp without time zone
+      - name: fis_kdgrup
+        description: ""
+        data_type: numeric(3, 0)
+      - name: fis_name2p
+        description: ""
+        data_type: character varying
+      - name: fis_sprachep
+        description: ""
+        data_type: numeric(4, 0)
+      - name: fis_gebdatp
+        description: ""
+        data_type: timestamp without time zone
+      - name: fis_toddatp
+        description: ""
+        data_type: timestamp without time zone
+      - name: fis_natp
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_basket_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_msg_no_cd
+        description: ""
+        data_type: character varying
+      - name: kd_msg_no_ctl_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_pep_cd
+        description: ""
+        data_type: character varying
+      - name: fin_vollm_cd
+        description: ""
+        data_type: character varying
+      - name: kd_kont_dat_last
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_kont_end_cd
+        description: ""
+        data_type: character varying
+      - name: kd_gwv_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: swift_lnr
+        description: ""
+        data_type: numeric(22, 0)
+      - name: kd_01_nr
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_02_nr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_03_nr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_01_cd
+        description: ""
+        data_type: character varying
+      - name: af_legal_kat_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_sitz_gsch_cd
+        description: ""
+        data_type: character varying
+      - name: bvg_cd
+        description: ""
+        data_type: character varying
+      - name: geburt_dat_p
+        description: ""
+        data_type: timestamp without time zone
+      - name: geburt_jahr_p
+        description: ""
+        data_type: numeric(4, 0)
+      - name: ort_lnr_heimat_p
+        description: ""
+        data_type: numeric(22, 0)
+      - name: ort_lnr_heimat_2_p
+        description: ""
+        data_type: numeric(22, 0)
+      - name: land_lnr_nat_p
+        description: ""
+        data_type: numeric(4, 0)
+      - name: eb_legal_kat_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: tod_dat_p
+        description: ""
+        data_type: timestamp without time zone
+      - name: tod_jahr_p
+        description: ""
+        data_type: numeric(4, 0)
+      - name: zivilstand_cd_p
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_verm_stat_cd
+        description: ""
+        data_type: character varying
+      - name: kd_entwpot_cd
+        description: ""
+        data_type: character varying
+      - name: wrg_lnr_gew_jahr_a
+        description: ""
+        data_type: numeric(4, 0)
+      - name: gew_jahr_avg
+        description: ""
+        data_type: numeric(20, 6)
+      - name: wrg_lnr_ums_jahr_a
+        description: ""
+        data_type: numeric(4, 0)
+      - name: ums_jahr_avg
+        description: ""
+        data_type: numeric(20, 6)
+      - name: kd_pep_cd_auto
+        description: ""
+        data_type: character varying
+      - name: kd_pep_dt_auto
+        description: ""
+        data_type: timestamp without time zone
+      - name: noga_cd_02
+        description: ""
+        data_type: character varying
+      - name: noga_cd_08
+        description: ""
+        data_type: character varying
+      - name: asp_pers
+        description: ""
+        data_type: character varying
+      - name: kd_bil_notw_cd
+        description: ""
+        data_type: character varying
+      - name: bil_einr_dat_per
+        description: ""
+        data_type: timestamp without time zone
+      - name: bil_einr_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_kont_hauefi_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_mass_mail_cd
+        description: ""
+        data_type: character varying
+      - name: kd_vip_cd
+        description: ""
+        data_type: character varying
+      - name: betrag_bk_ertr
+        description: ""
+        data_type: numeric(20, 6)
+      - name: wrg_lnr_bk_ertr
+        description: ""
+        data_type: numeric(4, 0)
+      - name: bk_ertr_satz
+        description: ""
+        data_type: numeric(10, 6)
+      - name: betrag_net_ngeld
+        description: ""
+        data_type: numeric(20, 6)
+      - name: wrg_lnr_net_ngeld
+        description: ""
+        data_type: numeric(4, 0)
+      - name: net_ngeld_satz
+        description: ""
+        data_type: numeric(10, 6)
+      - name: kd_haupt_bk_cd
+        description: ""
+        data_type: character varying
+      - name: text_beruf
+        description: ""
+        data_type: character varying
+      - name: text_wunsch
+        description: ""
+        data_type: character varying
+      - name: kd_zek_id
+        description: ""
+        data_type: character varying
+      - name: kd_mifid_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_cif_id
+        description: ""
+        data_type: character varying
+      - name: kd_tx_ausz_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: mt_nr_bil_abs
+        description: ""
+        data_type: numeric(2, 0)
+      - name: bil_prol_abs_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_umw_risk_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: bem_umw_risk
+        description: ""
+        data_type: character varying
+      - name: aufent_bewi_cd_ptn
+        description: ""
+        data_type: numeric(2, 0)
+      - name: aufent_bew_dat_ptn
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_id_ausl_cd
+        description: ""
+        data_type: character varying
+      - name: kd_search_zus
+        description: ""
+        data_type: character varying
+      - name: uid_nr
+        description: ""
+        data_type: character varying
+      - name: land_lnr_nat_2
+        description: ""
+        data_type: numeric(4, 0)
+      - name: land_lnr_nat_p_2
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_rcon_typ_cd
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_aris_copa_cd
+        description: ""
+        data_type: character varying
+      - name: kd_hdl_gsch_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_rstat_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_rstat_ausp_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_bo_platz_cd
+        description: ""
+        data_type: character varying
+      - name: kd_rstat_ausp_cd_2
+        description: ""
+        data_type: numeric(4, 0)
+      - name: guetstand_cd_p
+        description: ""
+        data_type: numeric(2, 0)
+      - name: geschlecht_cd_p
+        description: ""
+        data_type: numeric(2, 0)
+      - name: kd_kont_dat_man
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_lnr_kont_man
+        description: ""
+        data_type: numeric(22, 0)
+      - name: kd_fatca_meth_cd
+        description: ""
+        data_type: numeric(4, 0)
+      - name: kd_kompl_strkt
+        description: ""
+        data_type: character varying
+      - name: kd_pep_man_dt
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_lnr_pep_man
+        description: ""
+        data_type: numeric(22, 0)
+      - name: kd_typ_cd
+        description: ""
+        data_type: numeric(1, 0)
+      - name: kd_wunsch_bk_cd
+        description: ""
+        data_type: character varying
+      - name: tod_dat_set_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: tod_dat_p_set_dat
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_stat_dt
+        description: ""
+        data_type: timestamp without time zone
+      - name: kd_lnr_ptn1
+        description: ""
+        data_type: numeric(22, 0)
+      - name: kd_lnr_ptn2
+        description: ""
+        data_type: numeric(22, 0)
+      - name: kd_appl_cd_1
+        description: ""
+        data_type: character varying
+      - name: load_ts
+        description: ""
+        data_type: timestamp without time zone

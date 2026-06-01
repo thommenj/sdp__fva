@@ -1,0 +1,64 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'sdp__fva'
+version: '1.0.0'
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'sdp__fva'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models", "groups"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+vars:
+  high_date: '''2299-12-31 23:59:59.999'''
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# In this example config, we tell dbt to build all models in the example/
+# directory as views. These settings can be overridden in the individual model
+# files using the `{{ config(...) }}` macro.
+models:
+  sdp__fva:
+    # Plattform Default fuer alle Layer. Alle Modelle werden als Views erstellt.
+    # Nur Core Objekte werden als Tabellen erstellt, zwecks Persistenz und Performance. Je nachdem kann auch ein Incremental Modell verwendet werden.
+    # Access Objekte werden standardmaessig als Views erstellt und nach Bedarf als Tabellen oder Incremental Modelle erstellt.
+    # Abweichungen von der Standard Materialisierung sind im Rahmen der Konzepte moeglich und werden in den jeweiligen Modellen definiert.
+    +materialized: view
+
+    kd_stamm:
+      inp:
+        +schema: kd_stamm__inp
+      cor:
+        +schema: kd_stamm__cor
+        +materialized: table
+      acc:
+        +schema: kd_stamm__acc
+
+    kd_adr:
+      inp:
+        +schema: kd_adr__inp
+      cor:
+        +schema: kd_adr__cor
+        +materialized: table
+      acc:
+        +schema: kd_adr__acc
+
+snapshots:
+  sdp__fva:
+    +dbt_valid_to_current: '2299-12-31 23:59:59.999999'
+    
+    kd_stamm__snapshot:
+      +schema: kd_stamm__cor

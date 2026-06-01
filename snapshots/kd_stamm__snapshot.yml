@@ -1,0 +1,10 @@
+snapshots:
+  - name: kd_stamm__snapshot
+    relation: ref('kd_stamm__inp')
+    config:
+      strategy: timestamp
+      unique_key: "concat(userbk_nr, '|', kd_lnr)"
+      updated_at: load_ts
+      hard_deletes: new_record
+      dbt_valid_to_current: "to_timestamp('2299-12-31 00:00:00', 'YYYY-MM-DD HH24:MI:SS')"
+      dbt_is_deleted: tec_ist_geloescht
