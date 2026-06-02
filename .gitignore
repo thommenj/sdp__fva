@@ -1,5 +1,11 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
 target/
 dbt_packages/
+logs/
 dbt_modules/
 profiles.yml
-.env
