@@ -2,7 +2,7 @@
 
 with base as (
     select
-        {{ generate_bk(['userbk_nr','kd_lnr']) }} as kd_stamm_bk,
+        {{ generate_bk(['kd_lnr','userbk_nr']) }} as kd_stamm_bk,
         dbt_valid_from as tec_gueltig_von,
         dbt_valid_to as tec_gueltig_bis,
         (dbt_valid_to = {{ var('high_date') }}) as ist_aktuell,
@@ -12,10 +12,9 @@ with base as (
     from {{ ref('kd_stamm__snapshot') }}
 
     {% if is_incremental() %}
-    where load_ts > (select coalesce(max(tec_gueltig_von), '1900-01-01') from {{ this }})
+        where load_ts > (select coalesce(max(target.tec_gueltig_von), '1900-01-01') from {{ this }} as target)
     {% endif %}
 )
 
-select 
-    *
+select *
 from base

@@ -34,42 +34,94 @@ models:
       - name: create_dt
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: create_id
         description: ""
         data_type: numeric(9, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: mut_von
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: mut_bis
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_lnr_vis
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: log_lnr_mut
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: vers_vor
         description: ""
         data_type: numeric(5, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: stat_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: userbk_nr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: vers
         description: ""
         data_type: numeric(5, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_lnr
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_appl_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: chkl_ber_id
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_nr
         description: ""
         data_type: character varying
@@ -80,564 +132,1316 @@ models:
       - name: edit_kd_nr
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: kd_sort_nr
         description: ""
         data_type: numeric(16, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: ds_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: berfirma_nr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kdkat_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_stat_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_segm_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_form_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: land_lnr_nat
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: land_lnr_ausl
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: wzweig_lnr
         description: ""
         data_type: numeric(6, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: geburt_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: geburt_jahr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: ahv_nr
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: eroeff_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: aufheb_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: tod_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: tod_jahr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: sitz_nr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kost_stl_lnr_pfct
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: name_1
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: name_1_p
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: vorname
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: vorname_p
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: kd_bez
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: titel_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: titel_cd_p
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: anrede_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: anrede_cd_p
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: briefanr_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: briefanr
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: name_zus
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: beruf_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: sprache_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: geschlecht_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: zivilstand_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: rform_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: rform_det_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: plz_heimatort
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: heimatort_1
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: ort_lnr_heimat
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: heimatort_2
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: ort_lnr_heimat_2
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: steuer_peri
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: vv_geb_kat
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_vw_cd
         description: ""
         data_type: numeric(3, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: erst_hist_jahr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bem_int
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: wrg_lnr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: guetstand_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: konfes_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: noga_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: snb_geldstrom_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: anz_mitarb
         description: ""
         data_type: numeric(6, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: anz_mitarb_per_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: aufent_bewi_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: aufent_bewi_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_lnr_priv
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: mitarb_sperr_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: sperr_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: vv_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: anl_disp_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: anl_strat_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: mwst_nr
         description: ""
         data_type: numeric(6, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: mwst_behdl_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: effekte_hdl_nr
         description: ""
         data_type: numeric(9, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bc_lnr_sic
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bil_pfl_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bil_stichtag
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bil_verftag
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kap
         description: ""
         data_type: numeric(20, 6)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: wrg_lnr_kap
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kap_aend_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: hr_eintr_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: hr_eintr_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: hr_eintr_dat_last
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: hr_loesch_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: log_det_cd_ums
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: log_det_cd_erfo
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: inter_cmpy_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_htyp_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_menge_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_art_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_grp_art_cd
         description: ""
         data_type: numeric(3, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_bez_lang
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: direct
       - name: kd_bez_lang_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kreditreform_id
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: teledata_id
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: mig_ref_zeichen
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_region
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_dom
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_mutdat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_kdgrup
         description: ""
         data_type: numeric(3, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_name2p
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_sprachep
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_gebdatp
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_toddatp
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fis_natp
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_basket_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_msg_no_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_msg_no_ctl_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_pep_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: fin_vollm_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_kont_dat_last
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_kont_end_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_gwv_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: swift_lnr
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_01_nr
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_02_nr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_03_nr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_01_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: af_legal_kat_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_sitz_gsch_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bvg_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: geburt_dat_p
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: geburt_jahr_p
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: ort_lnr_heimat_p
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: ort_lnr_heimat_2_p
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: land_lnr_nat_p
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: eb_legal_kat_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: tod_dat_p
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: tod_jahr_p
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: zivilstand_cd_p
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_verm_stat_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_entwpot_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: wrg_lnr_gew_jahr_a
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: gew_jahr_avg
         description: ""
         data_type: numeric(20, 6)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: wrg_lnr_ums_jahr_a
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: ums_jahr_avg
         description: ""
         data_type: numeric(20, 6)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_pep_cd_auto
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_pep_dt_auto
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: noga_cd_02
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: noga_cd_08
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: asp_pers
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_bil_notw_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bil_einr_dat_per
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bil_einr_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_kont_hauefi_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_mass_mail_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_vip_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: betrag_bk_ertr
         description: ""
         data_type: numeric(20, 6)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: wrg_lnr_bk_ertr
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bk_ertr_satz
         description: ""
         data_type: numeric(10, 6)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: betrag_net_ngeld
         description: ""
         data_type: numeric(20, 6)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: wrg_lnr_net_ngeld
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: net_ngeld_satz
         description: ""
         data_type: numeric(10, 6)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_haupt_bk_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: text_beruf
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: text_wunsch
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: kd_zek_id
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_mifid_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_cif_id
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_tx_ausz_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: mt_nr_bil_abs
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bil_prol_abs_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_umw_risk_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: bem_umw_risk
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: aufent_bewi_cd_ptn
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: aufent_bew_dat_ptn
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_id_ausl_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_search_zus
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: uid_nr
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: indirect
       - name: land_lnr_nat_2
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: land_lnr_nat_p_2
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_rcon_typ_cd
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_aris_copa_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_hdl_gsch_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_rstat_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_rstat_ausp_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_bo_platz_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_rstat_ausp_cd_2
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: guetstand_cd_p
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: geschlecht_cd_p
         description: ""
         data_type: numeric(2, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_kont_dat_man
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_lnr_kont_man
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_fatca_meth_cd
         description: ""
         data_type: numeric(4, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_kompl_strkt
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_pep_man_dt
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_lnr_pep_man
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_typ_cd
         description: ""
         data_type: numeric(1, 0)
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: kd_wunsch_bk_cd
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: false
+            gdpr: ""
       - name: tod_dat_set_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: tod_dat_p_set_dat
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_stat_dt
         description: ""
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_lnr_ptn1
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_lnr_ptn2
         description: ""
         data_type: numeric(22, 0)
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: kd_appl_cd_1
         description: ""
         data_type: character varying
+        config:
+          meta:
+            pii: true
+            gdpr: ""
       - name: load_ts
-        description: ""
+        description: "load timestamp"
         data_type: timestamp without time zone
+        config:
+          meta:
+            pii: false
+            gdpr: ""

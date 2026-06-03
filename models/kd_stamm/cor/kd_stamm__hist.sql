@@ -2,13 +2,13 @@
 
 with raw as (
     select
-        {{ generate_bk(['userbk_nr','kd_lnr']) }} as kd_stamm_bk,
-        load_ts                         as tec_gueltig_von,
+        {{ generate_bk(['kd_lnr','userbk_nr']) }} as kd_stamm_bk,
+        load_ts as tec_gueltig_von,
         {{ dbt_utils.star(from=ref('kd_stamm__inp')) }}
     from {{ ref('kd_stamm__inp') }}
 
     {% if is_incremental() %}
-    where load_ts > (select coalesce(max(tec_gueltig_von), '1900-01-01') from {{ this }})
+        where load_ts > (select coalesce(max(target.tec_gueltig_von), '1900-01-01') from {{ this }} as target)
     {% endif %}
 ),
 
