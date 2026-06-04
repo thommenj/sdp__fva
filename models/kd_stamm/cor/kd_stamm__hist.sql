@@ -18,7 +18,7 @@ versionen as (
         tec_gueltig_von,
         coalesce(
             lead(tec_gueltig_von) over (partition by kd_stamm_bk order by tec_gueltig_von),
-            {{ var('high_date') }}
+            {{ high_date_value() }}
         ) as tec_gueltig_bis,
         {{ dbt_utils.star(from=ref('kd_stamm__inp')) }}
     from raw
@@ -28,7 +28,7 @@ select
     kd_stamm_bk,
     tec_gueltig_von,
     tec_gueltig_bis,
-    (tec_gueltig_bis = {{ var('high_date') }}) as ist_aktuell,
+    (tec_gueltig_bis = {{ high_date_value() }}) as ist_aktuell,
     false as ist_geloescht,
     current_timestamp as tec_geladen_am,
     {{ dbt_utils.star(from=ref('kd_stamm__inp')) }}
