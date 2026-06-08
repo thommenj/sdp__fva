@@ -36,70 +36,70 @@ models:
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: create_id
         description: ""
         data_type: numeric(9, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: mut_von
         description: ""
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: mut_bis
         description: ""
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_lnr_vis
         description: ""
         data_type: numeric(22, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: log_lnr_mut
         description: ""
         data_type: numeric(22, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: vers_vor
         description: ""
         data_type: numeric(5, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: stat_cd
         description: ""
         data_type: numeric(4, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: userbk_nr
         description: ""
         data_type: numeric(4, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: vers
         description: ""
         data_type: numeric(5, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_lnr
         description: ""
@@ -176,7 +176,7 @@ models:
         data_type: numeric(2, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_form_cd
         description: ""
@@ -211,7 +211,7 @@ models:
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: geburt_jahr
         description: ""
@@ -232,14 +232,14 @@ models:
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: aufheb_dat
         description: ""
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: tod_dat
         description: ""
@@ -358,7 +358,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: sprache_cd
         description: ""
@@ -400,14 +400,14 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: heimatort_1
         description: ""
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: ort_lnr_heimat
         description: ""
@@ -421,7 +421,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: ort_lnr_heimat_2
         description: ""
@@ -463,7 +463,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: wrg_lnr
         description: ""
@@ -491,7 +491,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: snb_geldstrom_cd
         description: ""
@@ -624,7 +624,7 @@ models:
         data_type: numeric(20, 6)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: wrg_lnr_kap
         description: ""
@@ -736,14 +736,14 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: teledata_id
         description: ""
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: mig_ref_zeichen
         description: ""
@@ -869,7 +869,7 @@ models:
         data_type: numeric(4, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: swift_lnr
         description: ""
@@ -883,28 +883,28 @@ models:
         data_type: numeric(2, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_02_nr
         description: ""
         data_type: numeric(4, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_03_nr
         description: ""
         data_type: numeric(4, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_01_cd
         description: ""
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: af_legal_kat_cd
         description: ""
@@ -932,7 +932,7 @@ models:
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: geburt_jahr_p
         description: ""
@@ -974,7 +974,7 @@ models:
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: tod_jahr_p
         description: ""
@@ -1051,7 +1051,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: noga_cd_08
         description: ""
@@ -1065,7 +1065,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_bil_notw_cd
         description: ""
@@ -1177,14 +1177,14 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_mifid_cd
         description: ""
         data_type: numeric(2, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_cif_id
         description: ""
@@ -1254,7 +1254,7 @@ models:
         data_type: character varying
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: uid_nr
         description: ""
@@ -1380,7 +1380,7 @@ models:
         data_type: numeric(22, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_typ_cd
         description: ""
@@ -1401,46 +1401,39 @@ models:
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: tod_dat_p_set_dat
         description: ""
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_stat_dt
         description: ""
         data_type: timestamp without time zone
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_lnr_ptn1
         description: ""
         data_type: numeric(22, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_lnr_ptn2
         description: ""
         data_type: numeric(22, 0)
         config:
           meta:
-            pii: true
+            pii: false
             gdpr: ""
       - name: kd_appl_cd_1
         description: ""
         data_type: character varying
-        config:
-          meta:
-            pii: true
-            gdpr: ""
-      - name: load_ts
-        description: "load timestamp"
-        data_type: timestamp without time zone
         config:
           meta:
             pii: false
